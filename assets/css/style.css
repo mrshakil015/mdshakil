@@ -148,7 +148,8 @@ h6 {
   left: 0;
   top: 0;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  /* background: rgba(0, 0, 0, 0.9); */
+  background: rgba(5, 27, 51, 0.93);
 }
 
 #header.header-top .social-links,
@@ -294,7 +295,7 @@ h6 {
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(5, 27, 51, 0.93);
   transition: 0.3s;
   z-index: 999;
   margin-top: 0;
@@ -355,7 +356,8 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(0, 0, 0, 0.9);
+  /* background: rgba(0, 0, 0, 0.9); */
+  background: rgba(5, 27, 51, 0.93);
   padding: 30px;
 }
 
