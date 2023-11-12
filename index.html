@@ -27,19 +27,30 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 </head>
+<style>
+  #moving-text {
+    display: inline-block;
+    position: relative;
+  }
+
+  #moving-text span {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  /* Add any additional CSS styles you want for the text */
+</style>
 
 <body>
 
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
-
-      <h1><a href="index.html"><span style="color: #0bf7cf;">MD. SHAKIL</span></a></h1>
-
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-      <h2>I'm passionate at <strong>Deep Learning, Machine Learning</strong> </h2>
-
+      <h1><a href="index.html"><span id="moving-text" style="color: #0bf7cf;">MD. SHAKIL</span></a></h1>
+      <h2>I'm passionate at <strong>Programming, Deep Learning, Machine Learning</strong></h2>
+      <!-- <script src="script.js"></script> -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link active" href="#header"><i class="bi bi-house-door-fill"></i> Home</a></li>
@@ -48,9 +59,42 @@
           <li><a class="nav-link" href="#skills"><i class="bi bi-command"></i> Project & Skills</a></li>
           <li><a class="nav-link" href="#contact"><i class="bi bi-person-badge-fill"></i> Contact</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
+        <i class="bi bi-view-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
+      <script>
+        const text = document.getElementById('moving-text');
+        const letters = text.textContent.split('');
 
+        text.textContent = ''; // Clear the text inside the element
+
+        letters.forEach((letter, i) => {
+          const span = document.createElement('span');
+          span.textContent = letter;
+          text.appendChild(span);
+        });
+
+        function animateLetters() {
+          const spans = text.querySelectorAll('span');
+          spans.forEach((span, i) => {
+            setTimeout(() => {
+              span.style.transition = 'transform 0.5s linear'; // Decreased duration for increased speed
+              span.style.transform = 'translateY(-10px)'; // Increased wave height
+              setTimeout(() => {
+                span.style.transform = 'translateY(0)';
+              }, 500); // Adjust the duration of the animation (0.5 seconds in this example)
+            }, i * 50);
+          });
+        }
+
+        // Call the animation function to start the animation
+        animateLetters();
+
+        // Set an interval to continuously loop the animation
+        setInterval(() => {
+          animateLetters();
+        }, letters.length * 50 * 2 + 1000); // Adjust the interval timing as needed
+
+      </script>
       <div class="social-links">
         <a href="https://www.github.com/mrshakil015" class="github" target="_blank"><i class="bi bi-github"></i></a>
         <a href="https://www.twitter.com/mrshakil015" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
@@ -80,7 +124,7 @@
           <img src="assets/img/me.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>CSE Engineer</h3>
+          <!-- <h3>CSE Engineer</h3> -->
           <p class="fst-italic">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore
@@ -272,8 +316,23 @@
           <h2>University Project</h2>
         </div>
         <div class="row" style="margin: 0 0 10px 10px;">
+                   
           <div class="resume-item pb-0">
-            <h4>NLP Based Smart Resumev Analyzer</h4>
+            <h4>Number Plate Recognition Using Deep Learning</h4>
+            <p><em>It is mainly research based project. This research focuses on developing an automatic Bangla number plate recognition system using Convolutional Neural Networks (CNNs). The findings suggest that the proposed models can be employed for real-world applications requiring Bangla number plate recognition. This proposed model is built using eight pre-trained models, including VGG16, VGG19, DenseNet201, ResNet50, MobileNetv2, InceptionResNetv2, Inceptionv3, and Xception, and also two custom models are Max pooling and Average pooling with three Convolution Layer.</em></p>
+            <p>
+            <ul>
+              <li><strong>Programming Language: </strong>Python</li>
+              <li><strong>Core Techniques: </strong>Tensorflow, Keras, Matplotlib, CNN Models</li>
+              <li><strong>Project Link: </strong><a class="btn btn-info"
+                  href="https://github.com/mrshakil015/Using-Multiple-CNN-Model-Develop-Bangla-Number-Plate-Recognition-System" target="_blank">View Project</a>
+              </li>
+            </ul>
+
+            </p>
+          </div>
+          <div class="resume-item pb-0">
+            <h4>NLP Based Smart Resume Analyzer</h4>
             <p><em>Natural Language Processing (NLP) based web application project that analyze resumes. he main aim of
                 this project is to provide an efficient and objective solution for employers to evaluate candidate
                 resumes based on job requirements, streamlining the hiring process and improving the candidate
@@ -302,14 +361,15 @@
           </div>
           <div class="resume-item pb-0">
             <h4>Computer Graphics Project</h4>
-            <p><em>In this project I developed a graphical motion scenory. Here I designed our university front view. This project developed based on graphic.h library of C++.</em></p>
+            <p><em>In this project I developed a graphical motion scenory. Here I designed our university front view.
+                This project developed based on graphic.h library of C++.</em></p>
             <p>
-              <ul>
-                <li><strong>Tech Used: </strong>C++ (graphic.h)</li>
-                <li><strong>Project Link: </strong><a class="btn btn-info"
-                    href="https://github.com/mrshakil015/Resume-Analyzer-Project" target="_blank">View Project</a>
-                </li>
-              </ul>
+            <ul>
+              <li><strong>Tech Used: </strong>C++ (graphic.h)</li>
+              <li><strong>Project Link: </strong><a class="btn btn-info"
+                  href="https://github.com/mrshakil015/Resume-Analyzer-Project" target="_blank">View Project</a>
+              </li>
+            </ul>
 
             </p>
           </div>
@@ -416,7 +476,7 @@
           <div class="info-box">
             <i class="bx bx-map"></i>
             <h3>My Address</h3>
-            <p>Hemayetpur, Savar, Dhaka-1340, Bangladesh</p>
+            <p>Nimertek, Hemayetpur, Savar, Dhaka-1340, Bangladesh</p>
           </div>
         </div>
 
@@ -450,8 +510,13 @@
           <div class="info-box">
             <i class="bx bx-phone-call"></i>
             <h3>Call Me</h3>
-            <p>+880 17932 99882</p>
+            <p>+880 17932 99+++</p>
           </div>
+        </div>
+        <div class="col-md-12 mt-4 d-flex align-items-stretch">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2676.072552050007!2d90.2628021736693!3d23.80130468682339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755ebb4af6ca2c3%3A0xc9cbd67cae2b0478!2zTmltZXJ0ZWsgUm9hZCDgpqjgpr_gpq7gp4fgprDgpp_gp4fgppUg4Kaw4KeL4Kah!5e1!3m2!1sen!2sbd!4v1699810045214!5m2!1sen!2sbd"
+            frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen=""></iframe>
         </div>
       </div>
     </div>
