@@ -629,8 +629,11 @@ section .container {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
-.resume p, .resume ul li{
+.resume p{
   font-size: 1.15rem;
+}
+.resume ul li{
+  font-size: 1.1rem;
 }
 .resume .resume-title {
   font-size: 1.8rem;
