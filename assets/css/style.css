@@ -392,7 +392,7 @@ section .container {
   margin: 4px 10px;
 }
 
-.section-title p {
+.section-title p, .section-title h3 {
   margin: 0;
   margin: -15px 0 15px 0;
   font-size: 36px;
@@ -629,26 +629,33 @@ section .container {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume p, .resume ul li{
+  font-size: 1.15rem;
+}
 .resume .resume-title {
-  font-size: 26px;
+  font-size: 1.8rem;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
   color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  border-bottom: 1px solid #fff;
 }
 
 .resume .resume-item {
-  padding: 0 0 20px 20px;
+  padding: 0 0 0px 20px;
   margin-top: -2px;
   border-left: 2px solid rgba(255, 255, 255, 0.2);
   position: relative;
+    
 }
 
 .resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  /* text-transform: uppercase; */
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #18d26e;
   margin-bottom: 10px;
@@ -668,7 +675,7 @@ section .container {
 }
 
 .resume .resume-item ul li {
-  padding-bottom: 10px;
+  padding-bottom: 1px;
 }
 
 .resume .resume-item:last-child {
