@@ -49,7 +49,27 @@
   <!-- ======= Header ======= -->
   <header id="header">
     <div class="container">
-      <h1><a href="index.html"><span id="moving-text" style="color: #06b9ef;">MD. SHAKIL</span></a></h1>
+      <style>
+        .logo-container {
+          display: flex;
+          align-items: center;
+        }
+      
+        .text-name {
+          margin-left: 10px; /* Adjust the margin as needed */
+          /*color: #06b9ef;*/
+          color: #fff;
+        }
+      </style>
+      
+      <h1>
+        <a href="index.html" class="logo-container">
+          <img src="assets/img/apple-touch-icon.png" alt="Logo" style="width: 70px; height: 70px;">
+          <span class="text-name">MD. SHAKIL</span>
+        </a>
+      </h1>
+      
+    
       <h2>I'm passionate at <strong>Programming, Deep Learning, Machine Learning</strong></h2>
       <!-- <script src="script.js"></script> -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
@@ -66,15 +86,16 @@
       <script>
         const text = document.getElementById('moving-text');
         const letters = text.textContent.split('');
-
+        const logo = document.querySelector('img');
+      
         text.textContent = ''; // Clear the text inside the element
-
+      
         letters.forEach((letter, i) => {
           const span = document.createElement('span');
           span.textContent = letter;
           text.appendChild(span);
         });
-
+      
         function animateLetters() {
           const spans = text.querySelectorAll('span');
           spans.forEach((span, i) => {
@@ -86,17 +107,24 @@
               }, 500); // Adjust the duration of the animation (0.5 seconds in this example)
             }, i * 50);
           });
+      
+          // Animation for the logo
+          logo.style.transition = 'transform 0.5s linear'; // Adjust timing and animation as needed
+          logo.style.transform = 'rotate(100deg)'; // Example: Rotate the logo by 360 degrees
+          setTimeout(() => {
+            logo.style.transform = 'rotate(0)'; // Reset the logo rotation
+          }, 500); // Adjust the duration of the logo animation
         }
-
+      
         // Call the animation function to start the animation
         animateLetters();
-
+      
         // Set an interval to continuously loop the animation
         setInterval(() => {
           animateLetters();
         }, letters.length * 50 * 2 + 1000); // Adjust the interval timing as needed
-
       </script>
+      
       <div class="social-links">
         <a href="https://www.github.com/mrshakil015" class="github" target="_blank"><i class="bi bi-github"></i></a>
         <a href="https://www.twitter.com/mrshakil015" class="twitter" target="_blank"><i class="bi bi-twitter"></i></a>
@@ -123,7 +151,7 @@
 
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
-          <img src="assets/img/me.jpg" class="img-fluid" alt="">
+          <img src="assets/img/me5.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <!-- <h3>CSE Engineer</h3> -->
