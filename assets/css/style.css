@@ -68,7 +68,7 @@ h6 {
   font-size: 48px;
   margin: 0;
   padding: 0;
-  line-height: 1;
+  /* line-height: 1; */
   font-weight: 700;
   font-family: "Poppins", sans-serif;
 }
@@ -76,7 +76,7 @@ h6 {
 #header h1 a,
 #header h1 a:hover {
   color: #fff;
-  line-height: 1;
+  /* line-height: 1; */
   display: inline-block;
 }
 
@@ -109,7 +109,7 @@ h6 {
   align-items: center;
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
-  line-height: 1;
+  /* line-height: 1; */
   margin-right: 8px;
   border-radius: 50%;
   width: 40px;
@@ -128,7 +128,7 @@ h6 {
 
   #header h2 {
     font-size: 20px;
-    line-height: 30px;
+    /* line-height: 30px; */
   }
 
   #header .social-links {
@@ -187,6 +187,28 @@ h6 {
   }
 }
 
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.text-name {
+  margin-left: 10px; /* Adjust the margin as needed */
+  /*color: #06b9ef;*/
+  color: #ffffff;
+}
+
+
+@media (max-width: 426px) {
+  .text-name {
+    margin-left: 10px; /* Adjust the margin as needed */
+    color: #06b9ef;
+  }
+  #header h2{
+    text-align: center;
+  }
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -231,7 +253,7 @@ h6 {
 
 .navbar a i,
 .navbar a:focus i {
-  line-height: 0;
+  /* line-height: 0; */
   margin-left: 5px;
   margin-right: 3px;
   padding: 0;
@@ -274,7 +296,7 @@ h6 {
   font-size: 28px;
   cursor: pointer;
   display: none;
-  line-height: 0;
+  /* line-height: 0; */
   transition: 0.5s;
   position: fixed;
   right: 15px;
@@ -378,7 +400,7 @@ section .container {
   font-size: 14px;
   font-weight: 500;
   padding: 0;
-  line-height: 1px;
+  /* line-height: 1px; */
   margin: 0 0 20px 0;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -436,7 +458,7 @@ section .container {
   font-size: 16px;
   margin-right: 5px;
   color: #06b9ef;
-  line-height: 0;
+  /* line-height: 0; */
 }
 
 .about-me .content p:last-child {
@@ -468,7 +490,7 @@ section .container {
   padding: 12px;
   color: #06b9ef;
   border-radius: 50px;
-  line-height: 0;
+  /* line-height: 0; */
 }
 
 .counts .count-box span {
@@ -530,12 +552,13 @@ section .container {
   padding: 20px;
   background: rgba(255, 255, 255, 0.08);
   transition: ease-in-out 0.3s;
+  border-radius: 5px;
 }
 
 .interests .icon-box i {
   font-size: 32px;
   padding-right: 10px;
-  line-height: 1;
+  /* line-height: 1; */
 }
 
 .interests .icon-box h3 {
@@ -756,7 +779,7 @@ section .container {
 }
 
 .services .icon-box p {
-  line-height: 24px;
+  /* line-height: 24px; */
   font-size: 14px;
   margin-bottom: 0;
 }
@@ -805,7 +828,7 @@ section .container {
   padding: 8px 16px 10px 16px;
   font-size: 14px;
   font-weight: 600;
-  line-height: 1;
+  /* line-height: 1; */
   text-transform: uppercase;
   color: #fff;
   background: rgba(255, 255, 255, 0.1);
@@ -1042,7 +1065,7 @@ section .container {
 .contact .info-box p {
   padding: 0;
   color: #fff;
-  line-height: 24px;
+  /* line-height: 24px; */
   font-size: 14px;
   margin: 0 0 0 68px;
 }
@@ -1056,7 +1079,7 @@ section .container {
   font-size: 18px;
   display: inline-block;
   color: #fff;
-  line-height: 1;
+  /* line-height: 1; */
   margin-right: 12px;
   transition: 0.3s;
 }
